@@ -1,1 +1,66 @@
-#include <iostream>#include <iomanip>#include <string>#include <sstream>#include <cmath>#include <Windows.h>#include "ModulesHrytsiuk.h"using namespace std;string get_developer_info() {    return "© Євгеній Грицюк";}int check_logical_expr(char a, char b) {    return (a + 1 < b) ? 1 : 0;}string format_calculations(double x, double y, double z) {    stringstream ss;    ss << "Значення x, y, z (dec): " << x << ", " << y << ", " << z << "\n";    ss << "Значення x, y, z (hex): " << hexfloat << x << ", " << y << ", " << z << defaultfloat << "\n";    ss << "Значення S            : ";    try {        double s = s_calculation(x, y, z);        ss << s;    } catch (...) {        ss << "NAN (Порушення ОДЗ)";    }    return ss.str();}int main() {    SetConsoleOutputCP(CP_UTF8);    SetConsoleCP(CP_UTF8);    double x, y, z;    char a, b;    cout << "--- ВВЕДЕННЯ ДАНИХ ---" << endl;    cout << "Введіть дійсні числа x, y, z через пробіл: ";    if (!(cin >> x >> y >> z)) {        cerr << "Помилка вводу чисел!" << endl;        return 1;    }    cout << "Введіть два символи a та b через пробіл: ";    if (!(cin >> a >> b)) {        cerr << "Помилка вводу символів!" << endl;        return 1;    }    cout << "\n--- РЕЗУЛЬТАТИ (Вивід через cout) ---" << endl;    cout << get_developer_info() << endl;    cout << "Результат a + 1 < b   : " << check_logical_expr(a, b) << endl;    cout << format_calculations(x, y, z) << endl;    cout << "\n";    system("pause");    return 0;}
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <sstream>
+#include <cmath>
+#include <Windows.h>
+
+#include "ModulesHrytsiuk.h"
+
+using namespace std;
+
+string get_developer_info() {
+    return "© Євгеній Грицюк";
+}
+
+int check_logical_expr(char a, char b) {
+    return (a + 1 < b) ? 1 : 0;
+}
+
+string format_calculations(double x, double y, double z) {
+    stringstream ss;
+
+    ss << "Значення x, y, z (dec): " << x << ", " << y << ", " << z << "\n";
+    ss << "Значення x, y, z (hex): " << hexfloat << x << ", " << y << ", " << z << defaultfloat << "\n";
+    ss << "Значення S            : ";
+
+    try {
+        double s = s_calculation(x, y, z);
+        ss << s;
+    } catch (...) {
+        ss << "NAN (Порушення ОДЗ)";
+    }
+
+    return ss.str();
+}
+
+int main() {
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+
+    double x, y, z;
+    char a, b;
+
+    cout << "--- ВВЕДЕННЯ ДАНИХ ---" << endl;
+    cout << "Введіть дійсні числа x, y, z через пробіл: ";
+    if (!(cin >> x >> y >> z)) {
+        cerr << "Помилка вводу чисел!" << endl;
+        return 1;
+    }
+
+    cout << "Введіть два символи a та b через пробіл: ";
+    if (!(cin >> a >> b)) {
+        cerr << "Помилка вводу символів!" << endl;
+        return 1;
+    }
+
+    cout << "\n--- РЕЗУЛЬТАТИ (Вивід через cout) ---" << endl;
+
+    cout << get_developer_info() << endl;
+    cout << "Результат a + 1 < b   : " << check_logical_expr(a, b) << endl;
+    cout << format_calculations(x, y, z) << endl;
+
+    cout << "\n";
+    system("pause");
+    return 0;
+}

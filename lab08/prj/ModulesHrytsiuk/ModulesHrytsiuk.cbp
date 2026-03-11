@@ -19,7 +19,8 @@
 				</Compiler>
 			</Target>
 		</Build>
-		<Unit filename="main.c">
+		<Unit filename="ModulesHrytsiuk.h" />
+		<Unit filename="main.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

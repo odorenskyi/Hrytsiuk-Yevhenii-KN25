@@ -19,7 +19,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../ModulesHrytsiuk" />
 		</Compiler>
+		<Linker>
+			<Add library="../ModulesHrytsiuk/bin/Debug/libModulesHrytsiuk.a" />
+		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

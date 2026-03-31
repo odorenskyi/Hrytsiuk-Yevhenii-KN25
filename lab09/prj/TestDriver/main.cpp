@@ -21,7 +21,7 @@ void print_test_result(string test_name, bool passed) {
 }
 
 void run_task9_1_tests() {
-    cout << "--- Òåñòóâàííÿ çàäà÷³ 9.1 (Çíèæêè) ---" << endl;
+    cout << "--- Ğ¢ĞµÑÑ‚ÑƒĞ²Ğ°Ğ½Ğ½Ñ Ğ·Ğ°Ğ´Ğ°Ñ‡Ñ– 9.1 (Ğ—Ğ½Ğ¸Ğ¶ĞºĞ¸) ---" << endl;
     double d_uah, f_amt;
     int percent;
 
@@ -37,21 +37,21 @@ void run_task9_1_tests() {
 }
 
 void run_task9_2_tests() {
-    cout << "--- Òåñòóâàííÿ çàäà÷³ 9.2 (Ğîçì³ğè) ---" << endl;
+    cout << "--- Ğ¢ĞµÑÑ‚ÑƒĞ²Ğ°Ğ½Ğ½Ñ Ğ·Ğ°Ğ´Ğ°Ñ‡Ñ– 9.2 (Ğ Ğ¾Ğ·Ğ¼Ñ–Ñ€Ğ¸) ---" << endl;
 
     string res1 = task9_2_size_converter(46);
-    print_test_result("TC-01", (res1 == "Ì³æíàğîäíèé: M, UK: 36, Ôğàíö³ÿ: 3"));
+    print_test_result("TC-01", (res1 == "ĞœÑ–Ğ¶Ğ½Ğ°Ñ€Ğ¾Ğ´Ğ½Ğ¸Ğ¹: M, UK: 36, Ğ¤Ñ€Ğ°Ğ½Ñ†Ñ–Ñ: 3"));
 
     string res2 = task9_2_size_converter(45);
-    print_test_result("TC-02", (res2 == "Ğîçì³ğ íå çíàéäåíî"));
+    print_test_result("TC-02", (res2 == "Ğ Ğ¾Ğ·Ğ¼Ñ–Ñ€ Ğ½Ğµ Ğ·Ğ½Ğ°Ğ¹Ğ´ĞµĞ½Ğ¾"));
 
     string res3 = task9_2_size_converter(54);
-    print_test_result("TC-03", (res3 == "Ì³æíàğîäíèé: XXXL, UK: 44, Ôğàíö³ÿ: -"));
+    print_test_result("TC-03", (res3 == "ĞœÑ–Ğ¶Ğ½Ğ°Ñ€Ğ¾Ğ´Ğ½Ğ¸Ğ¹: XXXL, UK: 44, Ğ¤Ñ€Ğ°Ğ½Ñ†Ñ–Ñ: -"));
     cout << endl;
 }
 
 void run_task9_3_tests() {
-    cout << "--- Òåñòóâàííÿ çàäà÷³ 9.3 (Á³òè) ---" << endl;
+    cout << "--- Ğ¢ĞµÑÑ‚ÑƒĞ²Ğ°Ğ½Ğ½Ñ Ğ·Ğ°Ğ´Ğ°Ñ‡Ñ– 9.3 (Ğ‘Ñ–Ñ‚Ğ¸) ---" << endl;
 
     print_test_result("TC-01", (task9_3_bit_counter(11) == 1));
     print_test_result("TC-02", (task9_3_bit_counter(5) == 2));
@@ -63,13 +63,13 @@ int main() {
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
 
-    cout << "ÇÀÏÓÑÊ ÌÎÄÓËÜÍÈÕ ÒÅÑÒ²Â (UNIT TESTS)\n" << string(40, '=') << "\n\n";
+    cout << "Ğ—ĞĞŸĞ£Ğ¡Ğš ĞœĞĞ”Ğ£Ğ›Ğ¬ĞĞ˜Ğ¥ Ğ¢Ğ•Ğ¡Ğ¢Ğ†Ğ’ (UNIT TESTS)\n" << string(40, '=') << "\n\n";
 
     run_task9_1_tests();
     run_task9_2_tests();
     run_task9_3_tests();
 
-    cout << string(40, '=') << "\nÒåñòóâàííÿ çàâåğøåíî.\n";
+    cout << string(40, '=') << "\nĞ¢ĞµÑÑ‚ÑƒĞ²Ğ°Ğ½Ğ½Ñ Ğ·Ğ°Ğ²ĞµÑ€ÑˆĞµĞ½Ğ¾.\n";
 
     system("pause");
     return 0;

@@ -37,7 +37,7 @@ int task9_1_discount(double purchase_amount, double &discount_uah, double &final
         percent = 25;
     }
 
-    discount_uah = purchase_amount * (percent / 100.0);
+    discount_uah = (purchase_amount * percent) / 100.0;
     final_amount = purchase_amount - discount_uah;
 
     return percent;

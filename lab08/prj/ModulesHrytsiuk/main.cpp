@@ -1,6 +1,9 @@
 #include <cmath>
 #include <stdexcept>
 #include <string>
+#include <fstream>
+#include <ctime>
+#include <vector>
 
 constexpr double PI = 3.14159265358979323846;
 
@@ -74,4 +77,105 @@ int task9_3_bit_counter(int N) {
     }
 
     return count;
+}
+
+void task10_1_file_write(const std::string& in_filename, const std::string& out_filename) {
+    using namespace std;
+
+    ifstream in_file(in_filename);
+    if (!in_file.is_open()) return;
+
+    string sentence;
+    getline(in_file, sentence);
+    in_file.close();
+
+    string modified_sentence = sentence;
+    string targets[] = {"к", "т", "У", "л", "Й"};
+    for (const string& target : targets) {
+        size_t pos = 0;
+        while ((pos = modified_sentence.find(target, pos)) != string::npos) {
+            modified_sentence.replace(pos, target.length(), "<?>");
+            pos += 3;
+        }
+    }
+
+    int letter_count = 0;
+    for (char c : sentence) {
+        if (c != ' ' && c != '.' && c != ',' && c != '!' && c != '?' && c != '-' && c != ';' && c != ':') {
+            letter_count++;
+        }
+    }
+
+    ofstream out_file(out_filename, ios::out | ios::trunc);
+    if (!out_file.is_open()) return;
+
+    out_file << "Розробник: Грицюк Євгеній, КН-25\n";
+    out_file << "Установа: ЦНТУ, м. Кропивницький, Україна, 2026 рік\n\n";
+    out_file << modified_sentence << "\n\n";
+
+    if (letter_count % 2 == 0) {
+        out_file << "В хаті сонячній промінь косо\nНа долівку ляга з вікна...\n";
+        out_file << "Твої чорні шовкові коси\nПрипорошила вже сивина.\n";
+    } else {
+        out_file << "Коли малим ти вперше став на ноги -\nЯка ж то радість матері була!\n";
+        out_file << "Від тихої колиски до порога\nВона тебе за руку провела.\n";
+    }
+
+    out_file.close();
+}
+
+void task10_2_file_append(const std::string& in_filename, const std::string& out_filename) {
+    using namespace std;
+
+    ifstream in_file(in_filename);
+    if (!in_file.is_open()) return;
+
+    string sentence;
+    getline(in_file, sentence);
+    in_file.close();
+
+    ofstream out_file(out_filename, ios::app);
+    if (!out_file.is_open()) return;
+
+    out_file << "\n--- Задача 10.2 ---\n";
+    out_file << "Непарні символи речення: ";
+
+    for (size_t i = 0; i < sentence.length(); i += 2) {
+        out_file << sentence[i];
+    }
+    out_file << "\n";
+
+    time_t now = time(0);
+    string time_str = ctime(&now);
+    out_file << "Дата й час дозапису: " << time_str;
+
+    out_file.close();
+}
+
+void task10_3_math_append(const std::string& out_filename, double x, double y, double z, int b) {
+    using namespace std;
+
+    ofstream out_file(out_filename, ios::app);
+    if (!out_file.is_open()) return;
+
+    double s_result = s_calculation(x, y, z);
+
+    out_file << "\n--- Задача 10.3 ---\n";
+    out_file << "Результат виконання функції s_calculation з аргументами ";
+    out_file << "x=" << x << ", y=" << y << ", z=" << z << " дорівнює: " << s_result << ".\n";
+
+    string bin_str = "";
+    int temp = b;
+    if (temp == 0) {
+        bin_str = "0";
+    } else {
+        while (temp > 0) {
+            bin_str = (temp % 2 == 0 ? "0" : "1") + bin_str;
+            temp /= 2;
+        }
+    }
+
+    out_file << "Число " << b << " у двійковому коді: " << bin_str << ".\n";
+
+    out_file.close();
 }

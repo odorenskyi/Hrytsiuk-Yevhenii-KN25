@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1776346060 source:d:\hrytsiuk-yevhenii-kn25\lab10\prj\testdriver\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<iomanip>
+	<Windows.h>
+	"ModulesHrytsiuk.h"
+
+1776345258 d:\hrytsiuk-yevhenii-kn25\lab08\prj\moduleshrytsiuk\moduleshrytsiuk.h
+	<string>
+

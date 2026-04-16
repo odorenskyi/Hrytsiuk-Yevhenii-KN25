@@ -13,7 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="../../../lab08/prj" />
+					<Add directory="../../../lab08/prj/ModulesHrytsiuk" />
 				</Compiler>
 				<Linker>
 					<Add library="../../../lab08/prj/ModulesHrytsiuk/bin/Debug/libModulesHrytsiuk.a" />

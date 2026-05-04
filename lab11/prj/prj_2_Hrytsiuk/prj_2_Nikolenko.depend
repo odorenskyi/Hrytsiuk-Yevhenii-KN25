@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1777486097 source:d:\nikolenko-sviatoslav-kn25\lab11\prj\prj_2_nikolenko\main.cpp
+	<iostream>
+	<windows.h>
+	"struct_type_project_2.h"
+	"Module_Files_Honcharenko.h"
+	"Module_Editing_Hrytsiuk.h"
+	"Module_Search_Nikolenko.h"
+
+1776949130 d:\nikolenko-sviatoslav-kn25\lab11\prj\struct_type_project_2.h
+
+1777486157 d:\nikolenko-sviatoslav-kn25\lab11\prj\module_files_honcharenko\module_files_honcharenko.h
+	"struct_type_project_2.h"
+
+1777486166 d:\nikolenko-sviatoslav-kn25\lab11\prj\module_editing_hrytsiuk\module_editing_hrytsiuk.h
+	"struct_type_project_2.h"
+
+1777486148 d:\nikolenko-sviatoslav-kn25\lab11\prj\module_search_nikolenko\module_search_nikolenko.h
+	"struct_type_project_2.h"
+
+1776949130 d:\nikolenko-sviatoslav-kn25\lab11\prj\prj_2_nikolenko\struct_type_project_2.h
+
+1776949130 d:\nikolenko-sviatoslav-kn25\lab11\prj\module_files_honcharenko\struct_type_project_2.h
+
+1776949130 d:\nikolenko-sviatoslav-kn25\lab11\prj\module_editing_hrytsiuk\struct_type_project_2.h
+
+1776949130 d:\nikolenko-sviatoslav-kn25\lab11\prj\module_search_nikolenko\struct_type_project_2.h
+

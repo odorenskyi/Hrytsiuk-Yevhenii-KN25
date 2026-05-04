@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1776962453 source:d:\nikolenko-sviatoslav-kn25\lab11\prj\module_search_nikolenko\module_search_nikolenko.cpp
+	<iostream>
+	<cstring>
+	"Module_Search_Nikolenko.h"
+
+1777486148 d:\nikolenko-sviatoslav-kn25\lab11\prj\module_search_nikolenko\module_search_nikolenko.h
+	"struct_type_project_2.h"
+
+1776949130 d:\nikolenko-sviatoslav-kn25\lab11\prj\struct_type_project_2.h
+
+1776949130 d:\nikolenko-sviatoslav-kn25\lab11\prj\module_search_nikolenko\struct_type_project_2.h
+

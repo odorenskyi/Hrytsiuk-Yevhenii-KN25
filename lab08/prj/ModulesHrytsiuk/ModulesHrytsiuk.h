@@ -12,4 +12,15 @@ void task10_1_file_write(const std::string& in_filename, const std::string& out_
 void task10_2_file_append(const std::string& in_filename, const std::string& out_filename);
 void task10_3_math_append(const std::string& out_filename, double x, double y, double z, int b);
 
+class ClassLab12_Hrytsiuk {
+private:
+    double radius;
+public:
+    ClassLab12_Hrytsiuk(double r = 1.0);
+
+    double getRadius();
+    void setRadius(double r);
+    double calculateVolume();
+};
+
 #endif

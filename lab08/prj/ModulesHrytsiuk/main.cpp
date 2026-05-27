@@ -179,3 +179,26 @@ void task10_3_math_append(const std::string& out_filename, double x, double y, d
 
     out_file.close();
 }
+
+ClassLab12_Hrytsiuk::ClassLab12_Hrytsiuk(double r) {
+    if (r > 0) {
+        radius = r;
+    } else {
+        radius = 1.0;
+    }
+}
+
+double ClassLab12_Hrytsiuk::getRadius() {
+    return radius;
+}
+
+void ClassLab12_Hrytsiuk::setRadius(double r) {
+    if (r > 0) {
+        radius = r;
+    }
+}
+
+double ClassLab12_Hrytsiuk::calculateVolume() {
+    const double PI = 3.141592653589793;
+    return (4.0 / 3.0) * PI * pow(radius, 3);
+}

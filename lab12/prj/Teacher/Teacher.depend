@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1779900867 source:d:\hrytsiuk-yevhenii-kn25\lab12\prj\teacher\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<cmath>
+	<windows.h>
+	"ModulesHrytsiuk.h"
+
+1779897235 d:\hrytsiuk-yevhenii-kn25\lab08\prj\moduleshrytsiuk\moduleshrytsiuk.h
+	<string>
+

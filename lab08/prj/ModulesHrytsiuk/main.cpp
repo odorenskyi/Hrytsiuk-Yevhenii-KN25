@@ -4,6 +4,7 @@
 #include <fstream>
 #include <ctime>
 #include <vector>
+#include "ModulesHrytsiuk.h"
 
 constexpr double PI = 3.14159265358979323846;
 
